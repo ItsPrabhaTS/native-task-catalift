@@ -1,0 +1,22 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/application_navigation"
+    app:startDestination="@id/interestsFragment">
+    <fragment
+        android:id="@+id/interestsFragment"
+        android:name="com.example.catalift.ui.InterestsFragment"
+        android:label="InterestsFragment" >
+        <action
+            android:id="@+id/action_interestsFragment_to_professionFragment"
+            app:destination="@id/professionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/professionFragment"
+        android:name="com.example.catalift.ui.ProfessionFragment"
+        android:label="ProfessionFragment" >
+        <action
+            android:id="@+id/action_professionFragment_to_interestsFragment"
+            app:destination="@id/interestsFragment" />
+    </fragment>
+</navigation>
